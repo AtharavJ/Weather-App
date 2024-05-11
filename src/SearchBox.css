@@ -1,0 +1,14 @@
+.SearchBox {
+
+    text-align: center;
+
+    height: 300px;
+    width: 300px;
+    color: black;
+    border: 5px solid plum;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+
+
+}
