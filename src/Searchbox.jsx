@@ -21,7 +21,7 @@ export default function Searchbox({ updateInfo }) {
             );
 
             let jsonResponse = await response.json(); //parsing of json response into normal readable format
-            console.log(jsonResponse);
+            // console.log(jsonResponse);
         } catch (err) {
             throw err;
         }
@@ -56,8 +56,8 @@ export default function Searchbox({ updateInfo }) {
     let handleSubmit = async (event) => {
         try {
             event.preventDefault();
-            console.log("City entered is:", city);
-            console.log("Country entered is:", country);
+            // console.log("City entered is:", city);
+            // console.log("Country entered is:", country);
             setCity("");
             setCountry("");
             let newInfo = await weatherInfo();
