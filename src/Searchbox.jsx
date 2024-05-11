@@ -32,12 +32,12 @@ export default function Searchbox({ updateInfo }) {
         // console.log(jsonResponse);
         let result = {
             city: city,
-            Temperature: jsonResponse.main.temp,
-            Temperature_Min: jsonResponse.main.temp_min,
-            Temperature_Max: jsonResponse.main.temp_max,
-            Humidity: jsonResponse.main.humidity,
-            Feels_like: jsonResponse.main.feels_like,
-            Weather_Condition: jsonResponse.weather[0].description
+            temp: jsonResponse.main.temp,
+            temp_Min: jsonResponse.main.temp_min,
+            temp_Max: jsonResponse.main.temp_max,
+            humidity: jsonResponse.main.humidity,
+            feelslike: jsonResponse.main.feels_like,
+            weather: jsonResponse.weather[0].description
         };
         console.log(result);
         return result;
@@ -45,12 +45,10 @@ export default function Searchbox({ updateInfo }) {
 
 
     let handleCityChange = (event) => {
-        // console.log(event.target.value);
         setCity(event.target.value);
     };
 
     let handleCountryChange = (event) => {
-        // console.log(event.target.value);
         setCountry(event.target.value);
     };
 
@@ -73,7 +71,7 @@ export default function Searchbox({ updateInfo }) {
     return (
         <>
             <div className='SearchBox'>
-                {/* <h2>Search for Weather</h2> */}
+
                 <form onSubmit={handleSubmit}>
                     <TextField
                         id="city"
